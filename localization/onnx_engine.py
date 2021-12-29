@@ -215,6 +215,7 @@ class ONNX_engine:
                             annotator.box_label(xyxy, label, color=colors(c, True))
                             x_c = (xyxy[0].numpy() + xyxy[2].numpy())/2
                             y_c = (xyxy[1].numpy() + xyxy[3].numpy())/2
+                            print("Bounding Box Center: ({}, {})".format(x_c, y_c))
                             # if save_crop:
                             #     save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True)
 
@@ -228,10 +229,13 @@ class ONNX_engine:
                 im0 = annotator.result()
                 if view_img:
                     cv2.circle(im0, (int(x_c), int(y_c)), 3, (0, 0, 255), cv2.FILLED)
-                    cv2.imshow(str(p), im0)
                     key = cv2.waitKey(1)  # 1 millisecond
                     if key & 0xFF == 27:
-                        break
+                        view_img = False
+                    else:
+                        cv2.imshow(str(p), im0)
+
+
 
                 # Save results (image with detections)
                 # if save_img:
