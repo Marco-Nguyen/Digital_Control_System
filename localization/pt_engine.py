@@ -27,8 +27,8 @@ class Yolov5:
     def detect(self, frame):
         # time_start = time.time()
         # self.setup_params()
-        results = self.model(frame, size=640)
-        results.print()
+        results = self.model(frame, size=416)
+        # results.print()
         results.save()
         # self.model.conf = 0.7  # NMS confidence threshold
         # self.model.iou = 0.75  # NMS IoU threshold
@@ -64,7 +64,7 @@ class Yolov5:
 
 
 """RUN PT ENGINE"""
-weight_path = r"best.pt"
+weight_path = r"D:\Python\Pycharm\AI-in-agriculture\weights\Solar-car\new-data\yolov5s\best.pt"
 cap = cv2.VideoCapture(webcam_id)
 
 if __name__ == '__main__':
