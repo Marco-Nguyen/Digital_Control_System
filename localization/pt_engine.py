@@ -64,7 +64,7 @@ class Yolov5:
 
 
 """RUN PT ENGINE"""
-weight_path = r"D:\Python\Pycharm\AI-in-agriculture\weights\Solar-car\new-data\yolov5s\best.pt"
+weight_path = r"path/to/best.pt"
 cap = cv2.VideoCapture(webcam_id)
 
 if __name__ == '__main__':
