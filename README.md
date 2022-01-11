@@ -5,6 +5,22 @@ This module is about object tracking based on Yolov5 algorithm, design by Tai Ho
 
 ## Usage
 
+### Preparation
+
+```python
+$ pip install requirements.txt
+```
+
+```python
+$ cd yolov5 && pip install -r requirements.txt
+```
+
+(optional)
+
+```python
+$ pip install roboflow
+```
+
 ### Inference:
 
 1. Specify “weights_path” (onnx weight) and set “view_img” to True if you want to view inference result
@@ -57,3 +73,17 @@ $ python export.py --weights path/to/best.pt --include onnx --dynamic --img 416 
 ## Github repo
 
 [link](https://github.com/Marco-Nguyen/Digital_Control_System)
+
+## Weights
+
+In this project we use Yolov5 to train a custom model
+
+Link to onnx weights
+
+- [Yolov5n](https://drive.google.com/file/d/11PTbew50ZuX3on0t9C7vf32hP5ljKN5k/view?usp=sharing)
+- [Yolov5s](https://drive.google.com/file/d/1IDMKOBa62ehoqFKSTJvxbVkCXFn4qNrf/view?usp=sharing)
+
+Link to pt weights
+
+- [Yolov5n](https://drive.google.com/file/d/1-lDCDd_EesqbzUl5UpxI9HoxbCRUQEkN/view?usp=sharing)
+- [Yolov5s](https://drive.google.com/file/d/1I2hip_AqdypWF9OTrZTVeloKapP4yHB6/view?usp=sharing)
